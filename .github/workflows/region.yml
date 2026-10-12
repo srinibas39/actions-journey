@@ -1,0 +1,8 @@
+name: repo_var
+on: push
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: 1
+        run: echo "Deploying to ${{vars.DEPLOY_REGION}}"
