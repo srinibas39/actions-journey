@@ -2,7 +2,7 @@ name: release
 on: push
 jobs:
   checks:
-    uses: ./.github/workflows/notify.yaml
+    uses: ./.github/workflows/notify.yml
     with:
       environment: prod
     secrets:
