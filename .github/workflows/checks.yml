@@ -1,0 +1,11 @@
+name: checks
+on:
+  workflow_call:
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout
+        uses: actions/checkout@v4
+      - name: print
+        run: echo "check"
