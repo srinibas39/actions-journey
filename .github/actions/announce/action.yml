@@ -1,0 +1,11 @@
+name: announce
+description: A composite action with an input
+inputs:
+  app-name:
+    description: Name of the app
+    required: true
+runs:
+  using: composite
+  steps:
+    - run: echo "APP_NAME: ${{inputs.app-name}}"
+      shell: bash
