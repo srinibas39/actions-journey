@@ -11,6 +11,6 @@ on:
 jobs:
   test:
     runs-on: ubuntu-latest
-      steps:
+    steps:
         - run: echo "notify"
 
