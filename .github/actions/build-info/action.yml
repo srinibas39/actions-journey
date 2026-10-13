@@ -1,0 +1,10 @@
+name: build-info
+description: Composite --> Print branch , commit
+runs:
+  using: composite
+  steps:
+    - run: echo "BRANCH ${{github.ref_name}}"
+      shell: bash
+    - run: echo "COMMIT ${{github.sha}}"
+      shell: bash
+   
