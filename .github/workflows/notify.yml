@@ -1,0 +1,16 @@
+name: notify
+on:  
+  workflow_call:
+    inputs:
+      environment:
+        type: string
+        required: true
+    secrets:
+      NOTIFY_TOKEN:
+        required: true
+jobs:
+  test:
+    runs-on: ubuntu-latest
+      steps:
+        - run: echo "notify"
+

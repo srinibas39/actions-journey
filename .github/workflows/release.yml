@@ -1,17 +1,9 @@
 name: release
 on: push
 jobs:
-  lint:
-    runs-on: ubuntu-latest
-    steps:
-      - run: echo "linting done"
-  unit-tests:
-    runs-on: ubuntu-latest
-    steps:
-      - run: echo "unit tests done"
-  package:
-    runs-on: ubuntu-latest
-    needs: [lint, unit-tests]
-    steps:
-      - run: echo "packagin done"
-
+  checks:
+    uses: ./.github/workflows/notify.yaml
+    with:
+      environment: prod
+    secrets:
+      NOTIFY_TOKEN: ${{secrets.NOTIFY_TOKEN}}
