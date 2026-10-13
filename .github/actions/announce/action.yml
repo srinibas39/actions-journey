@@ -1,11 +1,11 @@
 name: announce
-description: A composite action with an input
+description: Print a start-of-job announcement
 inputs:
   app-name:
-    description: Name of the app
+    description: Name of the app being built
     required: true
 runs:
   using: composite
   steps:
-    - run: echo "APP_NAME: ${{inputs.app-name}}"
+    - run: echo "Starting a build of ${{ inputs.app-name }}"
       shell: bash
